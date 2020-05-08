@@ -51,7 +51,7 @@ class NavigationTest(BaseCase):
         # сохраняем название первого товара страницы
         item_name = self.get_text('//article[4]/a/div[2]/p[2]')
         # эмулируем наведение мышкой и клик на кнопке "Add to cart"
-        self.hover_and_click('//article[4]','//article[1]/a/div[1]/div/div[1]/p')
+        self.hover_and_click('//article[4]','//article[4]/a/div[1]/div/div[1]/p')
         # выбираем размер в выпадающем меню
         self.click('//*[@id="id-slct"]/div')
         self.click('//*[@id="id-slct"]/ul/li[2]')
