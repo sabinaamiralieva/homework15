@@ -49,18 +49,18 @@ class NavigationTest(BaseCase):
         # Идем на страницу товаров
         self.get(self.base_url+'/dolce-gabbana/s/1495')
         # сохраняем название первого товара страницы
-        item_name = self.get_text('//article[1]/a/div[2]/p[2]')
+        item_name = self.get_text('//article[4]/a/div[2]/p[2]')
         # эмулируем наведение мышкой и клик на кнопке "Add to cart"
-        self.hover_and_click('//article[1]','//article[1]/a/div[1]/div/div[1]/p')
+        self.hover_and_click('//article[4]','//article[1]/a/div[1]/div/div[1]/p')
         # выбираем размер в выпадающем меню
         self.click('//*[@id="id-slct"]/div')
         self.click('//*[@id="id-slct"]/ul/li[2]')
         # эмулируем наведение мышкой и клик на кнопке "Add to cart"
-        self.click('//article[1]/div[1]/form/div/button/span[1]')
+        self.click('//article[4]/div[1]/form/div/button/span[1]')
         # чуть ждем отработки скрипта
         self.sleep(0.1)
         # переходим к оплате
-        self.click('//article[1]/div[1]/form/div/a')
+        self.click('//article[4]/div[1]/form/div/a')
         # сохраняем название товара в корзине
         basket_name = self.get_text('//a[@class="product-name c-6"]/p[2]')
         # название выбранного товара и товара в корзине должно совпасть
